@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <style>
+    .card{
+      min-height: 350px;
+    }
+    .card .content{
+        font-size: .8rem !important;
+    }
+    .card-content{
+        max-height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .card-content::-webkit-scrollbar-track {
+        border: 1px solid #000;
+        padding: 2px 0;
+        background-color: rgba(51,  48, 145);
+    }
+    .card-content::-webkit-scrollbar {
+    width: 10px;
+    }
+    .card-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgba(188,  26, 140);
+    border: 1px solid #000;
+    }
+  </style>
+  <body>
+    <div class="container mb-5">
+       <div class="columns mt-5">
+           <div class="column is-full">
+          
+                <div class="field">
+                    <p class="control has-icons-left">
+                      <input id="search" class="input is-rounded" type="text" placeholder="Search..." autocomplete="off">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-search"></i>
+                      </span>
+                    </p>
+                  </div>
+           </div>
+           </div>
+           <div class="columns mt-5 is-multiline list">
+            
+           
+            </div>
+       <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
+            <a id="prev-page"><span class="pagination-previous" >Previous</span></a>
+            <div><span class="pagination-link" id="current-page"></span> <span class="pagination-link is-current">of</span> <span class="pagination-link" id="total-pages"></span></div>
+            <a class="pagination-next" id="next-page">Next</a>
+       </nav>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
